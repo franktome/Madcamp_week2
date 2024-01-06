@@ -36,8 +36,8 @@ public class Mypagefragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
 
-        Button before= view.findViewById(R.id.logout_btn);
-        before.setOnClickListener(new View.OnClickListener(){
+        Button logout= view.findViewById(R.id.logout_btn);
+        logout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 UserApiClient.getInstance().logout((Throwable error) -> {
