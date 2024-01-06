@@ -10,11 +10,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="A 열람실"
+        android:text="B 열람실"
         android:textSize="18sp"
         android:gravity="center"/>
 
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,35 +21,35 @@
         android:layout_marginTop="15dp">
 
         <Button
-            android:id="@+id/a1"
+            android:id="@+id/Button1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 1"
+            android:text="a1"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a2"
+            android:id="@+id/Button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 2"
+            android:text="a2"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a3"
+            android:id="@+id/Button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 3"
+            android:text="a3"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a4"
+            android:id="@+id/Button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 4"
+            android:text="a4"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -62,75 +61,35 @@
         android:layout_marginTop="15dp">
 
         <Button
-            android:id="@+id/a5"
+            android:id="@+id/Button5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 5"
+            android:text="a5"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a6"
+            android:id="@+id/Button6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 6"
+            android:text="a6"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a7"
+            android:id="@+id/Button7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 7"
+            android:text="a7"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a8"
+            android:id="@+id/Button8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 8"
-            android:layout_margin="5dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
-
-        <Button
-            android:id="@+id/a9"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button 9"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/a10"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button 10"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/a11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button 11"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/a12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button 12"
+            android:text="a8"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -142,35 +101,75 @@
         android:layout_marginTop="15dp">
 
         <Button
-            android:id="@+id/a13"
+            android:id="@+id/Button9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 13"
+            android:text="a9"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a14"
+            android:id="@+id/Button10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 14"
+            android:text="a10"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a15"
+            android:id="@+id/Button11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 16"
+            android:text="a11"
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/a16"
+            android:id="@+id/Button12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button 16"
+            android:text="a12"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Button13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="a13"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="a14"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="a16"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="a16"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
