@@ -1,5 +1,6 @@
 package com.chobo.week2_2try.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import androidx.fragment.app.Fragment;
 import com.chobo.week2_2try.MainActivity;
 import com.chobo.week2_2try.R;
 import com.chobo.week2_2try.Real_main;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class a_fragment extends Fragment {
 
@@ -31,8 +35,40 @@ public class a_fragment extends Fragment {
             }
         });
 
+        final List<Button> buttons = new ArrayList<>();
+        for (int i = 1; i <= 16; i++) {
+            int buttonId = getResources().getIdentifier("Button" + i, "id", requireActivity().getPackageName());
+            final Button button = view.findViewById(buttonId);
+            buttons.add(button);
 
+            // 각 버튼에 대한 클릭 이벤트 처리
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // 클릭된 버튼에 대한 처리
+                    handleButtonClick(button);
+
+                    // 다른 버튼들의 색상을 원래대로 돌려주는 처리
+                    resetOtherButtons(buttons, button);
+                }
+            });
+        }
         return view;
+    }
+    private void handleButtonClick(Button button) {
+        // 클릭된 버튼에 대한 처리 추가
+        // 예: 색상 변경 등
+        button.setBackgroundColor(Color.BLACK);
+    }
+
+    private void resetOtherButtons(List<Button> buttons, Button clickedButton) {
+        // 다른 버튼들의 색상을 원래대로 돌려주는 처리
+        for (Button button : buttons) {
+            if (button != clickedButton) {
+                // 클릭된 버튼이 아닌 경우, 색상을 원래대로 돌려줌
+                button.setBackgroundColor(Color.rgb(103, 80, 164)); // 여기에 원래 색상을 지정
+            }
+        }
     }
 
 }
