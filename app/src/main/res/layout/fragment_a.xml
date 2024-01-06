@@ -1,0 +1,198 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <!-- TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A 열람실"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/a1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 1"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 2"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 3"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 4"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/a5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 5"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 6"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 7"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 8"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/a9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 9"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 10"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 11"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 12"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/a13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 13"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 14"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 16"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/a16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 16"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이전화면"/>
+        <Button
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약하기"/>
+
+    </LinearLayout>
+
+</LinearLayout>

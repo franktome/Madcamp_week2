@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <!-- 시작 시간 입력 -->
+
+        <!-- 끝나는 시간 입력 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="시작 시간"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="종료 시간"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <!-- 시작 시간 입력 -->
+    <LinearLayout
+        android:id="@+id/timePickersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/time_text">
+
+        <!-- 시작 시간 입력 -->
+
+        <!-- 끝나는 시간 입력 -->
+        <TimePicker
+            android:id="@+id/startTimePicker"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:timePickerMode="spinner" />
+
+        <TimePicker
+            android:id="@+id/endTimePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:timePickerMode="spinner"/>
+    </LinearLayout>
+
+    <!-- 현황 보기 버튼 -->
+    <Button
+        android:id="@+id/viewStatusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현황 보기"
+        android:layout_below="@id/timePickersContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/room_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/viewStatusButton">
+
+        <!-- 시작 시간 입력 -->
+
+        <!-- 끝나는 시간 입력 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="열람실"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="잔여 좌석"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <!-- A, B, C 버튼과 왼쪽 옆 TextView들을 포함하는 LinearLayout -->
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/room_alpha"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- A 버튼과 왼쪽 옆 TextView -->
+        <LinearLayout
+            android:id="@+id/buttonAContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonA"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="A"/>
+
+            <TextView
+                android:id="@+id/textViewA"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- B 버튼과 왼쪽 옆 TextView -->
+        <LinearLayout
+            android:id="@+id/buttonBContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonB"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="B"/>
+
+            <TextView
+                android:id="@+id/textViewB"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- C 버튼과 왼쪽 옆 TextView -->
+        <LinearLayout
+            android:id="@+id/buttonCContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonC"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="C"/>
+
+            <TextView
+                android:id="@+id/textViewC"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

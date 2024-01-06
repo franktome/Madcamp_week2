@@ -1,0 +1,197 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <!-- TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C 열람실"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c1"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c2"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c3"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c4"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c5"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c6"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c7"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c8"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c9"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c10"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c11"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c12"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/Button13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c13"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c14"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c15"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/Button16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="c16"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이전화면"/>
+        <Button
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약하기"/>
+
+    </LinearLayout>
+
+</LinearLayout>
