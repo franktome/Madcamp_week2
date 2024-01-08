@@ -1,7 +1,10 @@
 package com.chobo.week2_2try.fragments;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,8 @@ public class c_fragment extends Fragment {
         return new c_fragment();
     }
 
+    private static int button_num=2131230730;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -35,6 +40,26 @@ public class c_fragment extends Fragment {
             }
         });
 
+        Button result = view.findViewById(R.id.result);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (button_num == 2131230730) {
+                    // 선택된 좌석이 없는 경우
+                    Log.i(TAG, "선택된 좌석이 없습니다");
+                    // 여기에서 사용자에게 메시지를 표시하거나 원하는 동작을 수행할 수 있습니다.
+                } else {
+                    // 선택된 좌석이 있는 경우 > DB에 보낼때 "a"+buttonId로 보내기
+                    Log.i(TAG, "눌려진 버튼의 id: " + button_num);
+                    // ///////////////////////////////////////////////////////////////////////////////////////////////////////
+                    //여기서 눌려진 버튼이 db에 있는지 확인하고 없다면 "예약되었습니다" 문구 띄우고 넘어가고 있다면 경고문 띄우고 넘어가지 않기//
+                    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    ((Real_main) requireActivity()).replaceFragment(Mypagefragment.newInstance());
+                    button_num = 2131230730;
+                }
+            }
+        });
+
         final List<Button> buttons = new ArrayList<>();
         for (int i = 1; i <= 16; i++) {
             int buttonId = getResources().getIdentifier("Button" + i, "id", requireActivity().getPackageName());
@@ -45,6 +70,8 @@ public class c_fragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Log.i(TAG, "눌려진 버튼의 id: " + button.getId());
+                    button_num = button.getId();
                     // 클릭된 버튼에 대한 처리
                     handleButtonClick(button);
 

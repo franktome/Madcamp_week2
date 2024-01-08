@@ -27,8 +27,8 @@ import com.kakao.sdk.user.model.User;
 
 public class Mypagefragment extends Fragment {
 
-    public Mypagefragment() {
-        // Required empty public constructor
+    public static Mypagefragment newInstance() {
+        return new Mypagefragment();
     }
 
     @Override

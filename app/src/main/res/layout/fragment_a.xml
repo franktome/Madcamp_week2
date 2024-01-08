@@ -29,7 +29,7 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button2"
+            android:id="@+id/Button10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,7 +37,7 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button3"
+            android:id="@+id/Button11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -45,7 +45,7 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button4"
+            android:id="@+id/Button12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -109,7 +109,7 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button10"
+            android:id="@+id/Button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,7 +117,7 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button11"
+            android:id="@+id/Button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,12 +125,14 @@
             android:layout_margin="5dp"/>
 
         <Button
-            android:id="@+id/Button12"
+            android:id="@+id/Button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="a12"
             android:layout_margin="5dp"/>
+
+
 
     </LinearLayout>
 
