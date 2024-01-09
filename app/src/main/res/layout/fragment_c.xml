@@ -1,9 +1,10 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="1dp"
     android:gravity="center">
 
     <!-- TextView -->
@@ -18,39 +19,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/black">
 
         <Button
             android:id="@+id/Button1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c1"
-            android:layout_margin="5dp"/>
+            android:text="C1"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c2"
-            android:layout_margin="5dp"/>
+            android:text="C2"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c3"
-            android:layout_margin="5dp"/>
+            android:text="C3"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c4"
-            android:layout_margin="5dp"/>
+            android:text="C4"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 
@@ -58,39 +74,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/black">
 
         <Button
             android:id="@+id/Button5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c5"
-            android:layout_margin="5dp"/>
+            android:text="C5"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c6"
-            android:layout_margin="5dp"/>
+            android:text="C6"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c7"
-            android:layout_margin="5dp"/>
+            android:text="C7"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c8"
-            android:layout_margin="5dp"/>
+            android:text="C8"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 
@@ -98,39 +129,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/black">
 
         <Button
             android:id="@+id/Button9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c9"
-            android:layout_margin="5dp"/>
+            android:text="C9"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c10"
-            android:layout_margin="5dp"/>
+            android:text="C10"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c11"
-            android:layout_margin="5dp"/>
+            android:text="C11"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c12"
-            android:layout_margin="5dp"/>
+            android:text="C12"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 
@@ -138,39 +184,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/black">
 
         <Button
             android:id="@+id/Button13"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c13"
-            android:layout_margin="5dp"/>
+            android:text="C13"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c14"
-            android:layout_margin="5dp"/>
+            android:text="C14"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button15"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c15"
-            android:layout_margin="5dp"/>
+            android:text="C15"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
         <Button
             android:id="@+id/Button16"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="c16"
-            android:layout_margin="5dp"/>
+            android:text="C16"
+            android:layout_margin="1dp"
+            android:background="@drawable/not_selected_seat"
+            app:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 

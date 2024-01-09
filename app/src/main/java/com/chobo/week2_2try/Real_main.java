@@ -43,6 +43,7 @@ public class Real_main extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         showExitDialog();
+        super.onBackPressed();
     }
 
     private void loadFragment(Fragment fragment) {
