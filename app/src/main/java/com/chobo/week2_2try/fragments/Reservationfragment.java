@@ -24,6 +24,7 @@ import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
+import android.widget.Toast;
 
 
 public class Reservationfragment extends Fragment {
@@ -58,10 +59,11 @@ public class Reservationfragment extends Fragment {
                 int minute2 = timePicker2.getCurrentMinute();
 
                 // 시간 비교
-                if (hour1 > hour2 || (hour1 == hour2 && minute1 >= minute2)) {
+                if (hour1 > hour2 || (hour1 == hour2 && minute1 > minute2)) {
                     // timePicker1의 시간이 timePicker2의 시간보다 뒤일 때 AlertDialog를 통해 경고 메시지 표시
-                    //showAlertDialog();
-                } else {
+                    Toast.makeText(getActivity(),"시간을 정확히 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     OkHttpClient client = new OkHttpClient();
                     String jsonData = String.format("{\"hour1\": \"%s\", \"minute1\": \"%s\", \"hour2\": \"%s\", \"minute2\": \"%s\" }",String.valueOf(hour1), String.valueOf(minute1), String.valueOf(hour2), String.valueOf(minute2));
                     RequestBody formBody = RequestBody.create(MediaType.parse("application/json"), jsonData);
@@ -104,8 +106,6 @@ public class Reservationfragment extends Fragment {
                                             textViewC.setText(availableC + "/16");
                                         });
 
-
-
                                     } else {
                                         String error= jsonResponse.getString("error");
                                         Log.d("Reservationfragment_ERR",error);
@@ -130,19 +130,28 @@ public class Reservationfragment extends Fragment {
             public void onClick(View view){
                 int hour1 = timePicker1.getCurrentHour();
                 int minute1 = timePicker1.getCurrentMinute();
+
+                // timePicker2의 시간을 가져옴
                 int hour2 = timePicker2.getCurrentHour();
                 int minute2 = timePicker2.getCurrentMinute();
-                String start_time =  Integer.toString(hour1)+":"+Integer.toString(minute1)+":00";
-                String end_time =  Integer.toString(hour2)+":"+Integer.toString(minute2)+":00";
 
-                Bundle bundle = new Bundle();
-                bundle.putString("start_time", start_time); // 데이터를 번들에 추가
-                bundle.putString("end_time", end_time);
+                if (hour1 > hour2 || (hour1 == hour2 && minute1 >= minute2)||(hour1 == hour2 && minute1 == minute2)) {
+                    // timePicker1의 시간이 timePicker2의 시간보다 뒤일 때 AlertDialog를 통해 경고 메시지 표시
+                    Toast.makeText(getActivity(),"시간을 정확히 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    String start_time =  Integer.toString(hour1)+":"+Integer.toString(minute1)+":00";
+                    String end_time =  Integer.toString(hour2)+":"+Integer.toString(minute2)+":00";
 
-                a_fragment nextFragment = a_fragment.newInstance();
-                nextFragment.setArguments(bundle);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("start_time", start_time); // 데이터를 번들에 추가
+                    bundle.putString("end_time", end_time);
 
-                ((Real_main) requireActivity()).replaceFragment(nextFragment);
+                    a_fragment nextFragment = a_fragment.newInstance();
+                    nextFragment.setArguments(bundle);
+
+                    ((Real_main) requireActivity()).replaceFragment(nextFragment);
+                }
 
             }
         });
@@ -151,14 +160,63 @@ public class Reservationfragment extends Fragment {
         b_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                ((Real_main)requireActivity()).replaceFragment(b_fragment.newInstance());
+                int hour1 = timePicker1.getCurrentHour();
+                int minute1 = timePicker1.getCurrentMinute();
+
+                // timePicker2의 시간을 가져옴
+                int hour2 = timePicker2.getCurrentHour();
+                int minute2 = timePicker2.getCurrentMinute();
+
+                if (hour1 > hour2 || (hour1 == hour2 && minute1 >= minute2)||(hour1 == hour2 && minute1 == minute2)) {
+                    // timePicker1의 시간이 timePicker2의 시간보다 뒤일 때 AlertDialog를 통해 경고 메시지 표시
+                    Toast.makeText(getActivity(),"시간을 정확히 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    String start_time =  Integer.toString(hour1)+":"+Integer.toString(minute1)+":00";
+                    String end_time =  Integer.toString(hour2)+":"+Integer.toString(minute2)+":00";
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("start_time", start_time); // 데이터를 번들에 추가
+                    bundle.putString("end_time", end_time);
+
+                    b_fragment nextFragment = b_fragment.newInstance();
+                    nextFragment.setArguments(bundle);
+
+                    ((Real_main) requireActivity()).replaceFragment(nextFragment);
+                }
             }
         });
         Button c_btn= view.findViewById(R.id.buttonC);
         c_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                ((Real_main)requireActivity()).replaceFragment(c_fragment.newInstance());
+                int hour1 = timePicker1.getCurrentHour();
+                int minute1 = timePicker1.getCurrentMinute();
+
+                // timePicker2의 시간을 가져옴
+                int hour2 = timePicker2.getCurrentHour();
+                int minute2 = timePicker2.getCurrentMinute();
+
+                if (hour1 > hour2 || (hour1 == hour2 && minute1 >= minute2)||(hour1 == hour2 && minute1 == minute2)) {
+                    // timePicker1의 시간이 timePicker2의 시간보다 뒤일 때 AlertDialog를 통해 경고 메시지 표시
+                    Toast.makeText(getActivity(),"시간을 정확히 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    String start_time =  Integer.toString(hour1)+":"+Integer.toString(minute1)+":00";
+                    String end_time =  Integer.toString(hour2)+":"+Integer.toString(minute2)+":00";
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("start_time", start_time); // 데이터를 번들에 추가
+                    bundle.putString("end_time", end_time);
+
+                    c_fragment nextFragment = c_fragment.newInstance();
+                    nextFragment.setArguments(bundle);
+
+                    ((Real_main) requireActivity()).replaceFragment(nextFragment);
+
+                }
+
+
             }
         });
 

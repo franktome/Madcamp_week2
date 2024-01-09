@@ -16,6 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="시작 시간"
+            android:textStyle="bold"
+            android:textSize="15dp"
             android:gravity="center"
             />
 
@@ -24,6 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="종료 시간"
+            android:textStyle="bold"
+            android:textSize="15dp"
             android:gravity="center"
             />
     </LinearLayout>
@@ -80,6 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="열람실"
+            android:textStyle="bold"
+            android:textSize="15dp"
             android:gravity="center"
             />
 
@@ -88,6 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="잔여 좌석"
+            android:textStyle="bold"
+            android:textSize="15dp"
             android:gravity="center"
             />
     </LinearLayout>
@@ -113,13 +121,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="A"/>
+                android:text="A 열람실"
+                android:padding="15dp"
+                android:layout_marginLeft="10dp"/>
 
             <TextView
                 android:id="@+id/textViewA"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
         </LinearLayout>
 
         <!-- B 버튼과 왼쪽 옆 TextView -->
@@ -127,20 +138,24 @@
             android:id="@+id/buttonBContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/buttonB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="B"/>
+                android:text="B 열람실"
+                android:padding="15dp"
+                android:layout_marginLeft="10dp" />
 
             <TextView
                 android:id="@+id/textViewB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
         </LinearLayout>
 
         <!-- C 버튼과 왼쪽 옆 TextView -->
@@ -148,20 +163,24 @@
             android:id="@+id/buttonCContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/buttonC"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="C"/>
+                android:text="C 열람실"
+                android:padding="15dp"/>
 
             <TextView
                 android:id="@+id/textViewC"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:gravity="center" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="1dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:padding="5dp"
     android:gravity="center">
 
     <!-- TextView -->
@@ -172,7 +174,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a12"
+            android:text="A12"
             android:layout_margin="1dp"
             android:background="@drawable/not_selected_seat"
             app:backgroundTint="@android:color/white"
@@ -205,7 +207,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a14"
+            android:text="A14"
             android:layout_margin="1dp"
             android:background="@drawable/not_selected_seat"
             app:backgroundTint="@android:color/white"
