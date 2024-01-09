@@ -16,9 +16,6 @@ import com.chobo.week2_2try.R;
 import com.chobo.week2_2try.Real_main;
 import java.io.IOException;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -27,7 +24,6 @@ import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
-import android.widget.Toast;
 
 
 public class Reservationfragment extends Fragment {
@@ -51,25 +47,19 @@ public class Reservationfragment extends Fragment {
         TextView textViewA = view.findViewById(R.id.textViewA);
         TextView textViewB = view.findViewById(R.id.textViewB);
         TextView textViewC = view.findViewById(R.id.textViewC);
-
         status_btn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 // timePicker1의 시간을 가져옴
                 int hour1 = timePicker1.getCurrentHour();
-                String hour1_s = String.valueOf(hour1);
                 int minute1 = timePicker1.getCurrentMinute();
-                String minute1_s = String.valueOf(minute1);
 
                 // timePicker2의 시간을 가져옴
                 int hour2 = timePicker2.getCurrentHour();
-                String hour2_s = String.valueOf(hour2);
                 int minute2 = timePicker2.getCurrentMinute();
-                String minute2_s = String.valueOf(minute2);
 
                 // 시간 비교
                 if (hour1 > hour2 || (hour1 == hour2 && minute1 >= minute2)) {
                     // timePicker1의 시간이 timePicker2의 시간보다 뒤일 때 AlertDialog를 통해 경고 메시지 표시
-                    Toast.makeText(getActivity(),"시간 설정이 잘못 되었습니다.", Toast.LENGTH_SHORT).show();
                     //showAlertDialog();
                 } else {
                     OkHttpClient client = new OkHttpClient();
@@ -118,7 +108,7 @@ public class Reservationfragment extends Fragment {
 
                                     } else {
                                         String error= jsonResponse.getString("error");
-                                        Log.d("ERRRRRRRR",error);
+                                        Log.d("Reservationfragment_ERR",error);
                                     }
 
                                     // Now you can use these values as needed
@@ -127,9 +117,6 @@ public class Reservationfragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
-                            } else {
-                                // Handle unsuccessful response
-                                // You can log the error or take appropriate action
                             }
                         }
                     });
@@ -137,12 +124,26 @@ public class Reservationfragment extends Fragment {
             }
         });
 
-
         Button a_btn= view.findViewById(R.id.buttonA);
         a_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                ((Real_main)requireActivity()).replaceFragment(a_fragment.newInstance());
+                int hour1 = timePicker1.getCurrentHour();
+                int minute1 = timePicker1.getCurrentMinute();
+                int hour2 = timePicker2.getCurrentHour();
+                int minute2 = timePicker2.getCurrentMinute();
+                String start_time =  Integer.toString(hour1)+":"+Integer.toString(minute1)+":00";
+                String end_time =  Integer.toString(hour2)+":"+Integer.toString(minute2)+":00";
+
+                Bundle bundle = new Bundle();
+                bundle.putString("start_time", start_time); // 데이터를 번들에 추가
+                bundle.putString("end_time", end_time);
+
+                a_fragment nextFragment = a_fragment.newInstance();
+                nextFragment.setArguments(bundle);
+
+                ((Real_main) requireActivity()).replaceFragment(nextFragment);
+
             }
         });
 

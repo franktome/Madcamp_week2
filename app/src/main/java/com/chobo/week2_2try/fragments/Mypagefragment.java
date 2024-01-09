@@ -2,7 +2,9 @@ package com.chobo.week2_2try.fragments;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.chobo.week2_2try.HttpCallback;
@@ -26,18 +29,31 @@ import com.kakao.sdk.common.model.ClientErrorCause;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 
 public class Mypagefragment extends Fragment {
 
     public static Mypagefragment newInstance() {
         return new Mypagefragment();
     }
-    private static String name ="hi";
+    private static String seat ="hi";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
+
+        SharedPreferences preferences = requireActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        user_info(preferences.getString("user_id"," "));
 
         Button logout= view.findViewById(R.id.logout_btn);
         logout.setOnClickListener(new View.OnClickListener(){
@@ -56,31 +72,51 @@ public class Mypagefragment extends Fragment {
             }
         });
 
-        Button viewresult= view.findViewById(R.id.viewinfo);
-        viewresult.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                requestname("nickname");
-                Log.i(TAG, name);
-            }
-        });
-
         return view;
     }
-    private void requestname(String nickname){
-        HttpRequestor.GET("http://172.10.7.29:80/save_user", nickname, new HttpCallback() {
+    private void user_info(String id) {
+        POST("http://172.10.7.29:80/user_info", id, new HttpCallback() {
             @Override
             public void onSuccess(String result) {
                 Log.d("Proceduree","Result check login from server :" + result);
                 String item = result;
-                //handleProfileResult(item);
             }
             @Override
             public void onFailure(Exception e) {
             }
         });
     }
-    private void handleProfileResult(String item){
-        name = item;
-        return;}
+    static void POST(String baseurl, String data, HttpCallback callback){
+        Log.d("Procedure", "POST Function Start");
+        String result = null;
+        OkHttpClient client = new OkHttpClient();
+        String url = baseurl;
+        RequestBody requestBody = new FormBody.Builder().add("data", data).build();
+        Request request = new Request.Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+        try{
+            Log.d("Procedure", "Execute POST");
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                    Log.d("Procedure", e.toString());
+                    callback.onFailure(e);
+                }
+
+                @Override
+                public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                    String result =  response.body().string();
+                    Log.d("Procedure", "POST Response Result : " + result);
+                    callback.onSuccess(result);
+                }
+            });
+        } catch (Exception e){
+            e.printStackTrace();
+            Log.d("Procedure", e.toString());
+        }
+    }
+
+
 }

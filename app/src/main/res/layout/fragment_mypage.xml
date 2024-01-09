@@ -1,42 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- res/layout/activity_main.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:gravity="center">
 
+    <!-- 상단 제목 -->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="320dp"
-        android:gravity="center"
-        android:text="마이페이지 입니다"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나의 정보 및 예약 현황"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- 첫 번째 수평 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 첫 번째 수평 레이아웃의 첫 번째 TextView -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="이름"
+            android:gravity="center"/>
+
+        <!-- 첫 번째 수평 레이아웃의 두 번째 TextView -->
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="두 번째 항목"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- 두 번째 수평 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 두 번째 수평 레이아웃의 첫 번째 TextView -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="좌석정보"
+            android:gravity="center"/>
+
+        <!-- 두 번째 수평 레이아웃의 두 번째 TextView -->
+        <TextView
+            android:id="@+id/seatinfo_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="네 번째 항목"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 세 번째 수평 레이아웃의 첫 번째 TextView -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="시작시간"
+            android:gravity="center"/>
+
+        <!-- 세 번째 수평 레이아웃의 두 번째 TextView -->
+        <TextView
+            android:id="@+id/starttime_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="네 번째 항목"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 세 번째 수평 레이아웃의 첫 번째 TextView -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="마감시간"
+            android:gravity="center"/>
+
+        <!-- 세 번째 수평 레이아웃의 두 번째 TextView -->
+        <TextView
+            android:id="@+id/endtime_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="네 번째 항목"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- 로그아웃 버튼 -->
     <Button
         android:id="@+id/logout_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="로그아웃"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/viewinfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="159dp"
-        android:text="결과보기"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
