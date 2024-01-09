@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -36,6 +37,9 @@ import org.json.JSONArray;
 import android.content.res.ColorStateList;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 public class b_fragment extends Fragment {
 
     public static b_fragment newInstance() {
@@ -45,6 +49,7 @@ public class b_fragment extends Fragment {
     private String start_time;
     private String  end_time;
     private JSONArray notAvailableArray;
+    private Button current_seat = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -122,6 +127,7 @@ public class b_fragment extends Fragment {
                                         public void onClick(View view) {
                                             // 클릭된 버튼에 대한 처리
                                             handleButtonClick(button);
+                                            current_seat = button;
 
                                             // 다른 버튼들의 색상을 원래대로 돌려주는 처리
                                             resetOtherButtons(buttons, notavailablebuttons, button);
@@ -145,6 +151,80 @@ public class b_fragment extends Fragment {
                 }
             }
         });
+
+        result.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(current_seat==null){
+                    Toast.makeText(getActivity(),"자리를 선택해주세요.", Toast.LENGTH_SHORT).show();
+                }else{
+                    String current_seat_text = current_seat.getText().toString();
+                    String current_seat_no = current_seat_text.substring(1);
+
+                    SharedPreferences preferences = requireActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                    String user_id = preferences.getString("user_id",null);
+                    //occupied_users(user_id,A,seat_no), occupied_seatsA(user_id,seat_no, start_time, end_time
+                    OkHttpClient client = new OkHttpClient();
+                    String jsonData = String.format("{\"start_time\": \"%s\", \"end_time\": \"%s\", \"room\": \"B\", \"seat_no\": \"%s\", \"user_id\": \"%s\" }",start_time,end_time,current_seat_no, user_id);
+                    RequestBody formBody = RequestBody.create(MediaType.parse("application/json"), jsonData);
+                    Request request = new Request.Builder()
+                            .url("http://172.10.7.29:80/insert_reservation") // Replace with your actual Flask server endpoint
+                            .post(formBody)
+                            .build();
+
+                    client.newCall(request).enqueue(new okhttp3.Callback() {
+                        @Override
+                        public void onFailure(okhttp3.Call call, IOException e) {
+                            // Handle failure
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(okhttp3.Call call, okhttp3.Response response) throws IOException {
+                            // Handle the response from the server
+                            if (response.isSuccessful()) {
+                                // Handle successful response
+
+                                // Convert the response body to a string
+                                String responseBody = response.body().string();
+
+                                try {
+                                    // Parse the JSON response
+                                    JSONObject jsonResponse = new JSONObject(responseBody);
+
+                                    if (jsonResponse.has("Reservation_method")) {
+
+                                        String method = jsonResponse.getString("Reservation_method");
+
+                                        getActivity().runOnUiThread(() -> {
+                                            if (method.equals("insert")){
+                                                Toast.makeText(getActivity(),"예약이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                                            }
+                                            else{
+                                                Toast.makeText(getActivity(),"예약이 변경되었습니다.", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+
+
+
+                                    } else {
+                                        String error= jsonResponse.getString("error");
+                                        Log.d("B_Reservation_ERR",error);
+                                    }
+
+                                    // Now you can use these values as needed
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
 
 
         return view;
