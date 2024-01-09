@@ -12,6 +12,8 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.chobo.week2_2try.HttpCallback;
+import com.chobo.week2_2try.HttpRequestor;
 import com.chobo.week2_2try.MainActivity;
 import com.chobo.week2_2try.R;
 import com.chobo.week2_2try.Real_main;
@@ -30,6 +32,7 @@ public class Mypagefragment extends Fragment {
     public static Mypagefragment newInstance() {
         return new Mypagefragment();
     }
+    private static String name ="hi";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,6 +56,31 @@ public class Mypagefragment extends Fragment {
             }
         });
 
+        Button viewresult= view.findViewById(R.id.viewinfo);
+        viewresult.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                requestname("nickname");
+                Log.i(TAG, name);
+            }
+        });
+
         return view;
     }
+    private void requestname(String nickname){
+        HttpRequestor.GET("http://172.10.7.29:80/save_user", nickname, new HttpCallback() {
+            @Override
+            public void onSuccess(String result) {
+                Log.d("Proceduree","Result check login from server :" + result);
+                String item = result;
+                //handleProfileResult(item);
+            }
+            @Override
+            public void onFailure(Exception e) {
+            }
+        });
+    }
+    private void handleProfileResult(String item){
+        name = item;
+        return;}
 }

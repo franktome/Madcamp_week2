@@ -16,7 +16,7 @@ import okhttp3.Response;
 
 public class HttpRequestor {
 
-    static void GET(String baseurl, String data, HttpCallback callback){
+    public static void GET(String baseurl, String data, HttpCallback callback){
         Log.d("Procedure", "GET function Start");
         OkHttpClient client = new OkHttpClient();
         String url = baseurl + "/" + data;

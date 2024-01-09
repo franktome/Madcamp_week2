@@ -61,13 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
                             // 닉네임 가져오기
                             String nickname = user.getKakaoAccount().getProfile().getNickname();
-
-                            // SendUserDataTask 클래스를 사용하여 데이터 전송
-                            //new SendDataTask().execute(nickname);
-                            //requestProfileUsingId(nickname);
-                            //addnickname(nickname);
                             addnickname(nickname);
-
 
                             Log.i(TAG, "사용자 닉네임: " + nickname);
 
@@ -132,5 +126,4 @@ public class MainActivity extends AppCompatActivity {
 //        profile = item;
 //        return;
 //    }
-
 }
