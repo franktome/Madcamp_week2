@@ -6,6 +6,7 @@ import static java.security.AccessController.getContext;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences preferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+
         KakaoSdk.init(this, "ec44c45fb1f228885a6c33f347c8a266");
 
         ImageView kakaologin = findViewById(R.id.kakaologin);
@@ -60,12 +64,13 @@ public class MainActivity extends AppCompatActivity {
                             // 사용자 정보 성공적으로 가져옴
                             String userId = String.valueOf(user.getId());
                             Log.i(TAG, "사용자 ID: " + userId);
-
                             // 닉네임 가져오기
                             String nickname = user.getKakaoAccount().getProfile().getNickname();
-                            addnickname(nickname);
-
                             Log.i(TAG, "사용자 닉네임: " + nickname);
+                            adduserinfo(userId, nickname);
+                            editor.putString("user_id", userId);
+                            editor.putString("nickname", nickname);
+                            editor.apply();
 
                             // 원하는 작업 수행 후 메인 액티비티로 이동
                             Intent intent = new Intent(MainActivity.this, Real_main.class);
@@ -96,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private void addnickname(String nickname) {
-        HttpRequestor.POST("http://172.10.7.29:80/handle_post_request", nickname, new HttpCallback() {
+    private void adduserinfo(String id, String nickname) {
+        HttpRequestor.POST2("http://172.10.7.29:80/save_userinfo", id, nickname, new HttpCallback() {
             @Override
             public void onSuccess(String result) {
                 Log.d("Proceduree","Result check login from server :" + result);
@@ -111,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void requestProfileUsingId(String nickname){
-        HttpRequestor.GET("http://172.10.7.29:80/save_user", nickname, new HttpCallback() {
+        HttpRequestor.GET("http://172.10.7.29:80/handle_post_request", nickname, new HttpCallback() {
             @Override
             public void onSuccess(String result) {
                 Log.d("Proceduree","Result check login from server :" + result);

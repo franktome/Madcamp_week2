@@ -78,4 +78,42 @@ public class HttpRequestor {
             Log.d("Procedure", e.toString());
         }
     }
+
+    static void POST2(String baseurl, String id, String nickname, HttpCallback callback){
+        Log.d("Procedure", "POST Function Start");
+        OkHttpClient client = new OkHttpClient();
+        String url = baseurl;
+
+        // FormBody에 id와 data를 추가
+        RequestBody requestBody = new FormBody.Builder()
+                .add("id", id)
+                .add("nickname", nickname)
+                .build();
+
+        Request request = new Request.Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+
+        try {
+            Log.d("Procedure", "Execute POST");
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                    Log.d("Procedure", e.toString());
+                    callback.onFailure(e);
+                }
+
+                @Override
+                public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                    String result = response.body().string();
+                    Log.d("Procedure", "POST Response Result : " + result);
+                    callback.onSuccess(result);
+                }
+            });
+        } catch (Exception e){
+            e.printStackTrace();
+            Log.d("Procedure", e.toString());
+        }
+    }
 }
