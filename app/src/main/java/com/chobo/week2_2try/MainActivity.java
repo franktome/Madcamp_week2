@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                             Log.e(TAG, "사용자 정보 가져오기 실패", throwable);
                         } else if (user != null) {
                             // 사용자 정보 성공적으로 가져옴
+                            String userId = String.valueOf(user.getId());
+                            Log.i(TAG, "사용자 ID: " + userId);
 
                             // 닉네임 가져오기
                             String nickname = user.getKakaoAccount().getProfile().getNickname();

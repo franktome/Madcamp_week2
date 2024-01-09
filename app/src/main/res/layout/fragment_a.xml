@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a1"
+            android:text="A1"
             android:layout_margin="5dp"/>
 
         <Button
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a2"
+            android:text="A2"
             android:layout_margin="5dp"/>
 
         <Button
@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a3"
+            android:text="A3"
             android:layout_margin="5dp"/>
 
         <Button
@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a4"
+            android:text="A4"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -65,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a5"
+            android:text="A5"
             android:layout_margin="5dp"/>
 
         <Button
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a6"
+            android:text="A6"
             android:layout_margin="5dp"/>
 
         <Button
@@ -81,7 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a7"
+            android:text="A7"
             android:layout_margin="5dp"/>
 
         <Button
@@ -89,7 +89,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a8"
+            android:text="A8"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -105,7 +105,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a9"
+            android:text="A9"
             android:layout_margin="5dp"/>
 
         <Button
@@ -113,7 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a10"
+            android:text="A10"
             android:layout_margin="5dp"/>
 
         <Button
@@ -121,7 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a11"
+            android:text="A11"
             android:layout_margin="5dp"/>
 
         <Button
@@ -129,7 +129,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a12"
+            android:text="A12"
             android:layout_margin="5dp"/>
 
 
@@ -147,7 +147,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a13"
+            android:text="A13"
             android:layout_margin="5dp"/>
 
         <Button
@@ -155,7 +155,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a14"
+            android:text="A14"
             android:layout_margin="5dp"/>
 
         <Button
@@ -163,7 +163,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a16"
+            android:text="A16"
             android:layout_margin="5dp"/>
 
         <Button
@@ -171,7 +171,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="a16"
+            android:text="A16"
             android:layout_margin="5dp"/>
 
     </LinearLayout>

@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b1"
+            android:text="B1"
             android:layout_margin="5dp"/>
 
         <Button
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b2"
+            android:text="B2"
             android:layout_margin="5dp"/>
 
         <Button
@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b3"
+            android:text="B3"
             android:layout_margin="5dp"/>
 
         <Button
@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b4"
+            android:text="B4"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -65,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b5"
+            android:text="B5"
             android:layout_margin="5dp"/>
 
         <Button
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b6"
+            android:text="B6"
             android:layout_margin="5dp"/>
 
         <Button
@@ -81,7 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b7"
+            android:text="B7"
             android:layout_margin="5dp"/>
 
         <Button
@@ -89,7 +89,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b8"
+            android:text="B8"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -105,7 +105,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b9"
+            android:text="B9"
             android:layout_margin="5dp"/>
 
         <Button
@@ -113,7 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b10"
+            android:text="B10"
             android:layout_margin="5dp"/>
 
         <Button
@@ -121,7 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b11"
+            android:text="B11"
             android:layout_margin="5dp"/>
 
         <Button
@@ -129,7 +129,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b12"
+            android:text="B12"
             android:layout_margin="5dp"/>
 
     </LinearLayout>
@@ -145,7 +145,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b13"
+            android:text="B13"
             android:layout_margin="5dp"/>
 
         <Button
@@ -153,7 +153,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b14"
+            android:text="B14"
             android:layout_margin="5dp"/>
 
         <Button
@@ -161,7 +161,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b16"
+            android:text="B16"
             android:layout_margin="5dp"/>
 
         <Button
@@ -169,7 +169,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="b16"
+            android:text="B16"
             android:layout_margin="5dp"/>
 
     </LinearLayout>

@@ -74,7 +74,8 @@ public class a_fragment extends Fragment {
                 public void onClick(View view) {
                     button_num = button.getId();
                     //Log.i(TAG, "눌려진 버튼의 id: " + button_num);
-                    Log.i(TAG, "눌려진 버튼의 id: " + button.getId());
+                    //Log.i(TAG, "눌려진 버튼의 id: " + button.getId());
+                    Log.i(TAG, "눌려진 버튼의 id: " + ((Button)view).getText().toString());
                     // 클릭된 버튼에 대한 처리
                     handleButtonClick(button);
                     // 다른 버튼들의 색상을 원래대로 돌려주는 처리
