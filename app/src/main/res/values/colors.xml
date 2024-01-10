@@ -7,4 +7,5 @@
     <color name="blue">#6BBBE3</color>
     <color name="green">#6BE36D</color>
     <color name="selected_menu">#A9B9BF</color>
+    <color name="bottom_navigation_icon_color">#2D95BD</color>
 </resources>

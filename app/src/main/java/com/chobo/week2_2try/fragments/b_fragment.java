@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -51,6 +52,8 @@ public class b_fragment extends Fragment {
     private Button current_seat = null;
     private Button my_seat_btn = null;
 
+    private TextView stateTextView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -59,10 +62,14 @@ public class b_fragment extends Fragment {
         Button before= view.findViewById(R.id.before);
         Button result= view.findViewById(R.id.result);
 
+        stateTextView = view.findViewById(R.id.state);
+
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             start_time = bundle.getString("start_time");
             end_time = bundle.getString("end_time");
+            stateTextView.setText("현재 설정 시간: " + start_time + " ~ " + end_time);
         }
         before.setOnClickListener(new View.OnClickListener(){
             @Override
