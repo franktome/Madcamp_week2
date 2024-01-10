@@ -1,7 +1,8 @@
 <!-- res/layout/activity_main.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -31,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="이름"
+                android:textStyle="bold"
                 android:gravity="center"/>
 
             <!-- 첫 번째 수평 레이아웃의 두 번째 TextView -->
@@ -54,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="좌석정보"
+                android:textStyle="bold"
                 android:gravity="center"/>
 
             <!-- 두 번째 수평 레이아웃의 두 번째 TextView -->
@@ -76,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="시작시간"
+                android:textStyle="bold"
                 android:gravity="center"/>
 
             <!-- 세 번째 수평 레이아웃의 두 번째 TextView -->
@@ -99,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="마감시간"
+                android:textStyle="bold"
                 android:gravity="center"/>
 
             <!-- 세 번째 수평 레이아웃의 두 번째 TextView -->
@@ -121,9 +126,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="예약 취소하기"
+            android:textStyle="bold"
             android:layout_marginTop="70dp"
             android:layout_marginLeft="70dp"
-            android:layout_marginRight="70dp"/>
+            android:layout_marginRight="70dp"
+            android:background="@drawable/btn_custom"
+            app:backgroundTint="#4488EE"
+            android:elevation="8dp"/>
 
         <!-- 로그아웃 버튼 -->
         <Button
@@ -131,9 +140,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="로그아웃"
+            android:textStyle="bold"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="70dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_custom"
+            app:backgroundTint="#4488EE"
+            android:elevation="8dp"/>
     </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

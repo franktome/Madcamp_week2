@@ -11,12 +11,10 @@
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/main_menu" />
-
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bottomNavigationView" />
-
 
 </RelativeLayout>

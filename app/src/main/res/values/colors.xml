@@ -5,4 +5,6 @@
     <color name="purple">#6750A4</color>
     <color name="gray">#857C7C</color>
     <color name="blue">#6BBBE3</color>
+    <color name="green">#6BE36D</color>
+    <color name="selected_menu">#A9B9BF</color>
 </resources>

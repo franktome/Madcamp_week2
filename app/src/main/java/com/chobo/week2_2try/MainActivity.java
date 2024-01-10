@@ -90,16 +90,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button go_main = findViewById(R.id.gotomain);
-        go_main.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, Real_main.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
     }
     private void adduserinfo(String id, String nickname) {
         HttpRequestor.POST2("http://172.10.7.29:80/save_userinfo", id, nickname, new HttpCallback() {
@@ -114,23 +104,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void requestProfileUsingId(String nickname){
-        HttpRequestor.GET("http://172.10.7.29:80/handle_post_request", nickname, new HttpCallback() {
-            @Override
-            public void onSuccess(String result) {
-                Log.d("Proceduree","Result check login from server :" + result);
-                String item = result;
-                //handleProfileResult(item);
-            }
-            @Override
-            public void onFailure(Exception e) {
-            }
-        });
-    }
-
-//    private void handleProfileResult(String item){
-//        profile = item;
-//        return;
-//    }
 }
