@@ -53,5 +53,12 @@
 
 ![KakaoTalk_20240110_183534719_03](https://github.com/franktome/madcamp_week2/assets/102137004/7b056946-6a3d-4e25-89f4-50099ad7c334) ![KakaoTalk_20240110_183534719_04](https://github.com/franktome/madcamp_week2/assets/102137004/76687d33-7f96-4c0e-ac49-fcb7c7a63457)
 
+데이터베이스(MySQL)
+![users_table](https://github.com/franktome/madcamp_week2/assets/154505487/7ab191c0-6ca5-4035-ad42-96adcb8d0fde)
+![occupied_seatsA,B,C](https://github.com/franktome/madcamp_week2/assets/154505487/40d25aed-95e0-4253-a6b8-689fb446dd23)
+![occupied_users_tables](https://github.com/franktome/madcamp_week2/assets/154505487/f790c761-79fb-4e89-98c4-5b68f59dd172)
+
+
+
 
   
