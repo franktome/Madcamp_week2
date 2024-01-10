@@ -10,5 +10,12 @@
         <item name="colorPrimary">#6BBBE3</item>
     </style>
 
+    <style name="MyBottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="itemBackground">?android:attr/selectableItemBackground</item>
+        <item name="itemIconTint">@color/bottom_navigation_icon_color</item>
+        <item name="itemTextColor">@color/black</item>
+    </style>
+
     <style name="Theme.Week2_2try" parent="Base.Theme.Week2_2try" />
 </resources>
