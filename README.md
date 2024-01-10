@@ -55,9 +55,13 @@
 
 
 ## 데이터베이스(MySQL)
-
+- users 테이블 (사용자 ID, 사용자 닉네임)
 ![users_table](https://github.com/franktome/madcamp_week2/assets/154505487/7ab191c0-6ca5-4035-ad42-96adcb8d0fde)
+
+-occupied_tablesA,B,C (사용자ID, 좌석 번호)
 ![occupied_seatsA,B,C](https://github.com/franktome/madcamp_week2/assets/154505487/40d25aed-95e0-4253-a6b8-689fb446dd23)
+
+-occupied_users (사용자ID, 열람실 정보)
 ![occupied_users_tables](https://github.com/franktome/madcamp_week2/assets/154505487/f790c761-79fb-4e89-98c4-5b68f59dd172)
 
 
