@@ -1,4 +1,3 @@
-//b_fragment.java
 
 package com.chobo.week2_2try.fragments;
 
@@ -50,6 +49,7 @@ public class b_fragment extends Fragment {
     private String  end_time;
     private JSONArray notAvailableArray;
     private Button current_seat = null;
+    private Button my_seat_btn = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,7 +76,9 @@ public class b_fragment extends Fragment {
         //post 날려서 상태 받아와서 Click 가능 여부, 색깔 바꾸기
         //start_time, end_time, room 넘겨서 seat_no 받아오기
         OkHttpClient client = new OkHttpClient();
-        String jsonData = String.format("{\"start_time\": \"%s\", \"end_time\": \"%s\", \"room\": \"B\"}",start_time,end_time);
+        SharedPreferences preferences = requireActivity().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        String user_id = preferences.getString("user_id",null);
+        String jsonData = String.format("{\"start_time\": \"%s\", \"end_time\": \"%s\", \"room\": \"B\", \"user_id\": \"%s\"}",start_time,end_time, user_id);
         RequestBody formBody = RequestBody.create(MediaType.parse("application/json"), jsonData);
         Request request = new Request.Builder()
                 .url("http://172.10.7.29:80/room_state") // Replace with your actual Flask server endpoint
@@ -105,6 +107,7 @@ public class b_fragment extends Fragment {
 
                         if (jsonResponse.has("not_available")) {
                             notAvailableArray = jsonResponse.getJSONArray("not_available");
+                            String my_seat = jsonResponse.getString("my_seat");
 
                             getActivity().runOnUiThread(() -> {
                                 for (int i = 1; i <= 16; i++) {
@@ -121,6 +124,14 @@ public class b_fragment extends Fragment {
                                         button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.gray))); // Change to your desired color resource
                                     }
 
+                                    if(!my_seat.equals("no")){
+                                        if(i == Integer.parseInt(my_seat)){
+                                            button.setEnabled(true);
+                                            button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.green)));
+                                            my_seat_btn = button;
+                                        }
+                                    }
+
                                     // 각 버튼에 대한 클릭 이벤트 처리
                                     button.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -130,7 +141,7 @@ public class b_fragment extends Fragment {
                                             current_seat = button;
 
                                             // 다른 버튼들의 색상을 원래대로 돌려주는 처리
-                                            resetOtherButtons(buttons, notavailablebuttons, button);
+                                            resetOtherButtons(buttons, notavailablebuttons, button, my_seat_btn);
                                         }
                                     });
                                 }
@@ -235,16 +246,19 @@ public class b_fragment extends Fragment {
         button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.blue)));
     }
 
-    private void resetOtherButtons(List<Button> buttons, List<Button> notavailablebuttons, Button clickedButton) {
+    private void resetOtherButtons(List<Button> buttons, List<Button> notavailablebuttons, Button clickedButton, Button my_current_seat) {
         // 다른 버튼들의 색상을 원래대로 돌려주는 처리
         for (Button button : buttons) {
             if (button != clickedButton) {
-                button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white)));
-                for (Button notavailablebutton: notavailablebuttons){
-                    if(notavailablebutton == button) {
-                        Log.d("SetColor","erererererererere");
-                        button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.gray)));
-                        break;
+                if (button == my_current_seat){
+                    button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.green)));
+                }else {
+                    button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.white)));
+                    for (Button notavailablebutton: notavailablebuttons){
+                        if(notavailablebutton == button) {
+                            button.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.gray)));
+                            break;
+                        }
                     }
                 }
             }

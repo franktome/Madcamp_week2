@@ -1,8 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
     <style name="Base.Theme.Week2_2try" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- 안드로이드 상태바 색깔 지정 -->
+        <item name="android:statusBarColor">#6BBBE3</item>
+        <!-- 타이틀바 색깔 지정 -->
+        <item name="colorPrimary">#6BBBE3</item>
     </style>
 
     <style name="Theme.Week2_2try" parent="Base.Theme.Week2_2try" />

@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:id="@+id/time_text"
         android:layout_width="match_parent"
@@ -66,7 +67,10 @@
         android:text="현황 보기"
         android:layout_below="@id/timePickersContainer"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_custom"
+        app:backgroundTint="#4488EE"
+        android:elevation="8dp"/>
 
     <LinearLayout
         android:id="@+id/room_alpha"
@@ -122,8 +126,11 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="A 열람실"
-                android:padding="15dp"
-                android:layout_marginLeft="10dp"/>
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_custom"
+                app:backgroundTint="#4488EE"
+                android:elevation="8dp"/>
 
             <TextView
                 android:id="@+id/textViewA"
@@ -147,8 +154,11 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="B 열람실"
-                android:padding="15dp"
-                android:layout_marginLeft="10dp" />
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_custom"
+                app:backgroundTint="#4488EE"
+                android:elevation="8dp"/>
 
             <TextView
                 android:id="@+id/textViewB"
@@ -173,7 +183,10 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="C 열람실"
-                android:padding="15dp"/>
+                android:padding="10dp"
+                android:background="@drawable/btn_custom"
+                app:backgroundTint="#4488EE"
+                android:elevation="8dp"/>
 
             <TextView
                 android:id="@+id/textViewC"

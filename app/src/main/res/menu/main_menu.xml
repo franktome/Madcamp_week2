@@ -4,8 +4,9 @@
     <item
         android:id="@+id/reserve_seat"
         android:title="예약 및 변경"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/ic_action_name"/>
     <item
         android:id="@+id/my_page"
-        android:title="마이페이지" />
+        android:title="마이페이지"
+        android:icon="@drawable/ic_action_mypage"/>
 </menu>

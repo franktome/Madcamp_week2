@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="A 열람실"
+        android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center"/>
 
@@ -248,12 +249,21 @@
             android:id="@+id/before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이전화면"/>
+            android:text="이전화면"
+            android:textStyle="bold"
+            android:background="@drawable/btn_custom"
+            app:backgroundTint="#4488EE"
+            android:elevation="8dp"/>
         <Button
             android:id="@+id/result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="예약하기"/>
+            android:text="예약하기"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_custom"
+            app:backgroundTint="#4488EE"
+            android:elevation="8dp"/>
 
     </LinearLayout>
 
